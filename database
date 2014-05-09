@@ -1,0 +1,20 @@
+CREATE TABLE features
+(
+  coordinates point[],
+  type character(80),
+  description character(80),
+  id character(80) NOT NULL,
+  "marker-color" character(80),
+  "marker-size" character(80),
+  "marker-symbol" character(80),
+  name character(80),
+  "styleHash" character(80),
+  "styleURL" character(80),
+  title character(80),
+  CONSTRAINT pk_id PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE features
+  OWNER TO postgres
