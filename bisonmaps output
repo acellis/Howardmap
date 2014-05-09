@@ -1,0 +1,29 @@
+public class BisonMaps {
+
+    public static void main(String[] args) {
+
+        // read in the graph from a file
+        In graphin = new In("map_file");
+        EuclideanGraph G = new EuclideanGraph(graphin);
+        System.err.println("Done reading the graph " + "input_file");
+        System.err.println("Enter query pairs from stdin");
+        // read in the s-d pairs from standard input
+        Dijkstra dijkstra = new Dijkstra(G);
+        while(!StdIn.isEmpty()) {
+            int s = StdIn.readInt();
+            int d = StdIn.readInt();
+            dijkstra.showPath(s, d);
+            System.out.println();
+        }
+    }
+}
+/*Done reading the graph input_file
+Enter query pairs from stdin
+1 11
+1-11
+
+1 8
+1-10-71-8
+
+1 6
+1-10-71-8-7-6*/
