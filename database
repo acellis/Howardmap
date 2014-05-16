@@ -1,17 +1,17 @@
 CREATE TABLE features
 (
-  coordinates point[],
-  type character(80),
-  description character(80),
-  id character(80) NOT NULL,
-  "marker-color" character(80),
-  "marker-size" character(80),
-  "marker-symbol" character(80),
-  name character(80),
-  "styleHash" character(80),
-  "styleURL" character(80),
-  title character(80),
-  CONSTRAINT pk_id PRIMARY KEY (id)
+  coordinates point[], // for longitude and lattitude
+  type character(80),  // for a type of marker like a point or building or intersectio 
+  description character(80), 
+  id character(80) NOT NULL,    // identifies marker
+  "marker-color" character(80), // to differentiate an item on the map by color
+  "marker-size" character(80), // to differentiate a marker or symbol by sixe
+  "marker-symbol" character(80), // differentitate different Points of interest by a symbol
+  name character(80),           // name of marker or symbol
+  "styleHash" character(80),   // find tags
+  "styleURL" character(80),    //find url 
+  title character(80),        // for title 
+  CONSTRAINT pk_id PRIMARY KEY (id) //primary key is id
 )
 WITH (
   OIDS=FALSE
