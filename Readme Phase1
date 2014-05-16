@@ -1,0 +1,21 @@
+//Albert Ellis
+// SYCS 363
+//Phase 1 
+// Dr. Burgw
+Program uses several classes to navigate intitial point to destination point given from a file that has longitude and latitude corordinates for a given point. the file should contain the number of points eparated by the number of vertices on the same line.
+Blow the first line should be a given point with longitude and latitude corordinates and a new line should have a new point until the last point has been input. the next lines should represent the connections by using two integers the starting point and the connecting point. This should be repeated on a new line for every connection.
+
+ 
+
+Class: BisonMaps -- Main program that reads in the mapfile from the command line, and reads in one or more source IDs and destination IDs from stdin; one per line. $ java BisonMaps mapfile < input.txt
+example mapfile and inputfile
+Class: EuclideanGraph -- Undirected graph of points in the plane, where the edge weights are the Euclidean distances.
+Class: Dijkstra -- Dijkstra's Algorithm. Which is able to find the shortest path from one to another.
+Class: In -- Reads in data of various types from: stdin, file, URL. Reads in streams.
+Class: StdIn -- Supports reading variables of type int, double, String, boolean, long, or float from standard input. Standard input is built in.
+Class: IntIterator -- Interface for Adjacentcy list iterator. 
+Class: IndexPQ -- Indirect priority queue.
+Class: Point -- Point in the plane.
+
+In the main program BisonMaps Graph is in initialized by reading in mapfile. 	While not EOF, read in one or more source IDs and destination IDs from stdin; one per line. 
+For each source and destination Dijkstra.showPath() will be called 
