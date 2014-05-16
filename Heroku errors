@@ -1,0 +1,4 @@
+//Tried to export by  dumping postgres database by using directions from heroku in this manner.
+heroku pgbackups:restore DATABASE 'https://s3.amazonaws.com/HUmaps/logs/howardmap.sql'
+
+ERROR:  syntax/ error at line 1 at or near "//"
